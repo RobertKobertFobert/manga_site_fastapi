@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block css %}
-  <link rel="preload" href="{{ url_for('static', path='search/ab24ef225a3ac5d5.css') }}" as="style" /> 
-  <link rel="stylesheet" href="{{ url_for('static', path='search/ab24ef225a3ac5d5.css') }}" data-n-p="" />
+  <link rel="preload" href="../static/search/ab24ef225a3ac5d5.css" as="style" /> 
+  <link rel="stylesheet" href="../static/search/ab24ef225a3ac5d5.css" data-n-p="" />
 {% endblock %}
 
 {% block styles %}
@@ -370,10 +370,10 @@
     </div>
   </main>
 </div>
-<script src="{{ url_for('static', path='catalog/js/endless_scroll.js') }}"></script>
-<script src="{{ url_for('static', path='search/search_endless_scroll.js') }}"></script>
+<script src="../static/catalog/js/endless_scroll.js"></script>
+<script src="../static/search/search_endless_scroll.js"></script>
 <script>
   const titles_str = "{{ titles }}";
 </script>
-<script src="{{ url_for('static', path='search/search.js') }}"></script>
+<script src="../static/search/search.js"></script>
 {% endblock %}

@@ -4948,9 +4948,9 @@
               </div>     
               {% if user.username == profile.username %}
                 <input type="file" name="avatar" accept="image/*" id="id_avatar" style="display: none;">
-                <script src="{{ url_for('static', path='title/js/fetch_requests/fetch_request.js') }}"></script>
-                <script src="{{ url_for('static', path='profile/profile_avatar_put.js') }}"></script>      
-                <script src="{{ url_for('static', path='profile/password_post.js') }}"></script>
+                <script src="../static/title/js/fetch_requests/fetch_request.js"></script>
+                <script src="../static/profile/profile_avatar_put.js"></script> 
+                <script src="../static/profile/password_post.js"></script>
                 <script>
                   const csrf_token = "{{ csrf_token }}";
                   new Profile_avatar_put();   

@@ -39,8 +39,8 @@
   <link rel="stylesheet" type="text/css" href="../static/catalog/css/a87e1eafaffb2fdc.css" /> 
   
   {% block css %}
-  <link rel="preload" href="{{ url_for('static', path='catalog/css/9eb715df965d6cf8.css') }}" as="style" />
-  <link rel="stylesheet" href="{{ url_for('static', path='catalog/css/9eb715df965d6cf8.css') }}" data-n-p="" />
+  <link rel="preload" href="../static/catalog/css/9eb715df965d6cf8.css" as="style" />
+  <link rel="stylesheet" href="../static/catalog/css/9eb715df965d6cf8.css" data-n-p="" />
   {% endblock %}
 
   <noscript data-n-css=""></noscript>
@@ -1054,14 +1054,14 @@
     window.yaContextCb = window.yaContextCb || [];
   </script>
 
-  <script src="{{ url_for('static', path='catalog/js/filters/filters.js') }}"></script>
-  <script src="{{ url_for('static', path='catalog/js/filters/drop_menu_filters/drop_menu_filters.js') }}"></script>
-  <script src="{{ url_for('static', path='catalog/js/filters/drop_menu_filters/drop_menu_url_requests.js') }}"></script>
-  <script src="{{ url_for('static', path='catalog/js/filters/drop_menu_filters/drop_menu_stylization.js') }}"></script>
-  <script src="{{ url_for('static', path='catalog/js/filters/input_range_filters/input_range_filters.js') }}"></script>
-  <script src="{{ url_for('static', path='catalog/js/filters/chapters_filters/chapters_filters.js') }}"></script>
+  <script src="../static/catalog/js/filters/filters.js"></script>
+  <script src="../static/catalog/js/filters/drop_menu_filters/drop_menu_filters.js"></script>
+  <script src="../static/catalog/js/filters/drop_menu_filters/drop_menu_url_requests.js"></script>
+  <script src="../static/catalog/js/filters/drop_menu_filters/drop_menu_stylization.js"></script>
+  <script src="../static/catalog/js/filters/input_range_filters/input_range_filters.js"></script>
+  <script src="../static/catalog/js/filters/chapters_filters/chapters_filters.js"></script>
     
-  <script src="{{ url_for('static', path='catalog/js/endless_scroll.js') }}"></script>
+  <script src="../static/catalog/js/endless_scroll.js"></script>
 
   <script>
     const pages_count = "{{ pages_count }}";

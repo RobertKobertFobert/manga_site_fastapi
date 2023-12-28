@@ -5,13 +5,13 @@
 {% endblock %}
 
 {% block css %}
-  <link rel="preload" href="{{ url_for('static', path='signin/css/cb4f8de50573f9d5.css') }}" as="style" />
-  <link rel="stylesheet" href="{{ url_for('static', path='signin/css/cb4f8de50573f9d5.css') }}" data-n-g="" />
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='signin/css/843ea9ec36d246ae.css') }}" />
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='signin/css/920c959cc716ad46.css') }}" />
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='signin/css/029ac71e4e31b456.css') }}" />
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='signin/css/09e4f43c14f4840f.css') }}" />
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='signin/css/9dd15375466b1de0.css') }}" />
+  <link rel="preload" href="../static/signin/css/cb4f8de50573f9d5.css" as="style" />
+  <link rel="stylesheet" href="../static/signin/css/cb4f8de50573f9d5.css" data-n-g="" />
+  <link rel="stylesheet" type="text/css" href="../static/signin/css/843ea9ec36d246ae.css" />
+  <link rel="stylesheet" type="text/css" href="../static/signin/css/920c959cc716ad46.css" />
+  <link rel="stylesheet" type="text/css" href="../static/signin/css/029ac71e4e31b456.css" />
+  <link rel="stylesheet" type="text/css" href="../static/signin/css/09e4f43c14f4840f.css" />
+  <link rel="stylesheet" type="text/css" href="../static/signin/css/9dd15375466b1de0.css" />
 {% endblock %}
   
 {% block styles %}
@@ -152,9 +152,9 @@
     </p>
   </div>
   </div>
-  <script src="{{ url_for('static', path='signin/js/signin_post.js') }}"></script> 
-  <script src="{{ url_for('static', path='signin/js/reset_password.js') }}"></script> 
-  <script src="{{ url_for('static', path='title/js/fetch_requests/fetch_request.js') }}"></script> 
+  <script src="../static/signin/js/signin_post.js"></script> 
+  <script src="../static/signin/js/reset_password.js"></script> 
+  <script src="../static/title/js/fetch_requests/fetch_request.js"></script> 
   <script>
     const csrf_token = "{{ csrf_token }}";
     const exceptions_element = document.querySelector(".exceptions");

@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block css %}
-<link rel="preload" href="{{ url_for('static', path='title/css/5689d52a5bc7437e.css') }}" as="style" /> 
-<link rel="stylesheet" href="{{ url_for('static', path='title/css/5689d52a5bc7437e.css') }}" data-n-p="" />
-<link rel="stylesheet" href="{{ url_for('static', path='title/css/f246e387903032ed.css') }}" data-n-p="" />
-<link rel="stylesheet" href="{{ url_for('static', path='title/css/8910bb6d49cf84aa.css') }}"/>
+<link rel="preload" href="../static/title/css/5689d52a5bc7437e.css" as="style" /> 
+<link rel="stylesheet" href="../static/title/css/5689d52a5bc7437e.css" data-n-p="" />
+<link rel="stylesheet" href="../static/title/css/f246e387903032ed.css" data-n-p="" />
+<link rel="stylesheet" href="../static/title/css/8910bb6d49cf84aa.css"/>
 {% endblock %}
 
 {% block styles %}
@@ -1127,17 +1127,17 @@
         "></p>
 </next-route-announcer>
 
-<script src="{{ url_for('static', path='title/js/comment_input_stylization.js') }}"></script> 
-<script src="{{ url_for('static', path='title/js/title_menu_switcher.js') }}"></script> 
+<script src="../static/title/js/comment_input_stylization.js"></script> 
+<script src="../static/title/js/title_menu_switcher.js"></script> 
 
-<script src="{{ url_for('static', path='title/js/fetch_requests/fetch_request.js') }}"></script>
-<script src="{{ url_for('static', path='title/js/fetch_requests/title_rating_post.js') }}"></script>
-<script src="{{ url_for('static', path='title/js/fetch_requests/comment_rating_post.js') }}"></script>
+<script src="../static/title/js/fetch_requests/fetch_request.js"></script>
+<script src="../static/title/js/fetch_requests/title_rating_post.js"></script>
+<script src="../static/title/js/fetch_requests/comment_rating_post.js"></script>
 
-<script src="{{ url_for('static', path='title/js/websockets/websockets_title.js') }}"></script>
-<script src="{{ url_for('static', path='title/js/websockets/websockets_bookmark.js') }}"></script>
-<script src="{{ url_for('static', path='title/js/websockets/websockets_comment.js') }}"></script>
-<script>
+<script src="../static/title/js/websockets/websockets_title.js"></script>
+<script src="../static/title/js/websockets/websockets_bookmark.js"></script>
+<script src="../static/title/js/websockets/websockets_comment.js"></script>
+<script> 
   const user_id = "{{ user }}" ? "{{ user.id }}" : "";
   const title_id = "{{ title.id }}";
   const title_dir_name = "{{ title.dir_name }}";
@@ -1149,7 +1149,8 @@
   };
 
   const session_id = Websockets_title.generate_session_id();
-  const ws = new WebSocket(`ws://localhost:8000/ws/${session_id}`);
+  // const ws = new WebSocket(`ws://localhost:8000/ws/${session_id}`);
+  const ws = new WebSocket(`ws://test-omr94qty.b4a.run/ws/${session_id}`);
 
   websockets_title.handler_websocket_response();
   websockets_title.listen_websocket_close();
