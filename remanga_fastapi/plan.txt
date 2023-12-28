@@ -6,6 +6,8 @@ git remote add origin https://github.com/TimurMeshchenko/manga_site_fastapi.git
 git config --global user.name=TimurMeshchenko
 git config --global user.email=matsuokisho@gmail.com
 
+docker rm $(docker ps -aq)
+
 -------------------------------------------
 
 Django Подправить код, как в fastapi.

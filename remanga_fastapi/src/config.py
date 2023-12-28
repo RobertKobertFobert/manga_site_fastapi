@@ -22,27 +22,30 @@ REDIS_PORT = os.environ.get("REDIS_PORT")
 
 RABBITMQ_HOST = os.environ.get("RABBITMQ_HOST")
 
-SMTP_USER = os.environ.get("SMTP_USER")
-SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD")
+# SMTP_USER = os.environ.get("SMTP_USER")
+# SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD")
+SMTP_USER = "fawwa2515af@outlook.com"
+SMTP_PASSWORD = "fGJsS(Q.PP#95r#"
 
 class Config:
     use_rabbitmq = use_redis = False
     channel = queue = None
-    redis = Redis(host=REDIS_HOST, port=REDIS_PORT)
+    # redis = Redis(host=REDIS_HOST, port=REDIS_PORT)
+    redis = ""
 
     async def connect_rabbitmq(self) -> None:
-        try:
-            connection = await connect_robust(host=RABBITMQ_HOST)
-            Config.channel = await connection.channel()
-            Config.queue = await Config.channel.declare_queue('email_queue')
+        # try:
+        #     connection = await connect_robust(host=RABBITMQ_HOST)
+        #     Config.channel = await connection.channel()
+        #     Config.queue = await Config.channel.declare_queue('email_queue')
 
-            Config.use_rabbitmq = True
-        except exceptions.AMQPConnectionError:
-            return
+        #     Config.use_rabbitmq = True
+        # except exceptions.AMQPConnectionError:
+        return
         
     def check_redis_connection(self) -> bool:
-        try:
-            Config.redis.ping()
-            Config.use_redis = True
-        except ConnectionError:
-            return
+        # try:
+        #     Config.redis.ping()
+        #     Config.use_redis = True
+        # except ConnectionError:
+        return
