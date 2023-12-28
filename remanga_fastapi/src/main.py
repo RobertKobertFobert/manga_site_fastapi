@@ -50,11 +50,11 @@ origins = [
 #     allow_headers=["*"],
 # )
 
-# is_pytest_run = not os.path.exists("static")
-# path_to_src = "../src/" if is_pytest_run else ""
+is_pytest_run = not os.path.exists("static")
+path_to_src = "../src/" if is_pytest_run else ""
 
-app.mount("/static", StaticFiles(directory=f"/static"), name="static")
-app.mount("/media", StaticFiles(directory=f"/media"), name="media")
+app.mount("/static", StaticFiles(directory=f"{path_to_src}static"), name="static")
+app.mount("/media", StaticFiles(directory=f"{path_to_src}media"), name="media")
 
 @app.middleware("http")
 async def add_validate_csrf(request: Request, call_next: Any) -> Response:
