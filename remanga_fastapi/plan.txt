@@ -8,6 +8,21 @@ git config --global user.email=matsuokisho@gmail.com
 
 docker rm $(docker ps -aq)
 
+
+  <link rel="preload" href="{{ url_for('static', path='signin/css/cb4f8de50573f9d5.css', _external=True, _scheme='https') }}" as="style" /> 
+  <link rel="stylesheet" href="{{ url_for('static', path='signin/css/cb4f8de50573f9d5.css', _external=True, _scheme='https') }}" data-n-g="" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='signin/css/843ea9ec36d246ae.css', _external=True, _scheme='https') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='signin/css/920c959cc716ad46.css', _external=True, _scheme='https') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='signin/css/029ac71e4e31b456.css', _external=True, _scheme='https') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='signin/css/09e4f43c14f4840f.css', _external=True, _scheme='https') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='signin/css/9dd15375466b1de0.css', _external=True, _scheme='https') }}" />
+
+
+  <link rel="stylesheet" href="{{ url_for('static', path='catalog/css/4a7d5f9251fa28dc.css', _external=True, _scheme='https') }}" data-n-g="" />
+  <link rel="preload" href="{{ url_for('static', path='catalog/css/0c734abce1a29008.css', _external=True, _scheme='https') }}" as="style" />
+  <link rel="stylesheet" href="{{ url_for('static', path='catalog/css/0c734abce1a29008.css', _external=True, _scheme='https') }}" data-n-p="" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='catalog/css/a87e1eafaffb2fdc.css', _external=True, _scheme='https') }}" /> 
+
 -------------------------------------------
 
 Django Подправить код, как в fastapi.
