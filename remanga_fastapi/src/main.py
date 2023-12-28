@@ -53,8 +53,8 @@ app.add_middleware(
 # is_pytest_run = not os.path.exists("static")
 # path_to_src = "../src/" if is_pytest_run else ""
 
-app.mount("/static", StaticFiles(directory=f"remanga_fastapi/src/static"), name="static")
-app.mount("/media", StaticFiles(directory=f"remanga_fastapi/src/media"), name="media")
+app.mount("/static", StaticFiles(directory=f"/remanga_fastapi/src/static"), name="static")
+app.mount("/media", StaticFiles(directory=f"/remanga_fastapi/src/media"), name="media")
 
 @app.middleware("http")
 async def add_validate_csrf(request: Request, call_next: Any) -> Response:
