@@ -42,19 +42,19 @@ origins = [
     "http://localhost:8080",
 ]
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=origins,
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
 
 # is_pytest_run = not os.path.exists("static")
 # path_to_src = "../src/" if is_pytest_run else ""
 
-app.mount("/static", StaticFiles(directory=f"/remanga_fastapi/src/static"), name="static")
-app.mount("/media", StaticFiles(directory=f"/remanga_fastapi/src/media"), name="media")
+app.mount("/static", StaticFiles(directory=f"/static"), name="static")
+app.mount("/media", StaticFiles(directory=f"/media"), name="media")
 
 @app.middleware("http")
 async def add_validate_csrf(request: Request, call_next: Any) -> Response:
