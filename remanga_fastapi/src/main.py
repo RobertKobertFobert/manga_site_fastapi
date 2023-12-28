@@ -50,6 +50,14 @@ origins = [
 #     allow_headers=["*"],
 # )
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods
+    allow_headers=["*"],  # Allow all headers
+)
+
 is_pytest_run = not os.path.exists("static")
 path_to_src = "../src/" if is_pytest_run else ""
 
